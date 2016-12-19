@@ -7,9 +7,9 @@ section .text
 
 _start:
     mov     rax, 1    ;  sys_write
-    mov     rdi, 1    ;  stdout
-    mov     rsi, msg  ;  char buf
-    mov     rdx, 14   ;  content length
+    mov     rdi, 1    ;  arg1: stdout
+    mov     rsi, msg  ;  arg2: char buf
+    mov     rdx, 14   ;  arg3: content length
     syscall           ;  execute syscall 
 
     mov    rax, 60    ;  exit
